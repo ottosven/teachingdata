@@ -57,7 +57,7 @@
 #'
 #' @keywords datasets
 #'
-#' @source tatistisches Bundesamt (Destatis), Genesis-Online, Tablename 13211BJ001, License \href{https://www.govdata.de/dl-de/by-2-0}{DL-DE BY-2.0}
+#' @source Statistisches Bundesamt (Destatis), Genesis-Online, Tablename 13211BJ001, License \href{https://www.govdata.de/dl-de/by-2-0}{DL-DE BY-2.0}
 "urate_y"
 
 
@@ -73,5 +73,54 @@
 #'
 #' @keywords datasets
 #'
-#' @source tatistisches Bundesamt (Destatis), Genesis-Online, Tablename 13211BM001, License \href{https://www.govdata.de/dl-de/by-2-0}{DL-DE BY-2.0}
+#' @source Statistisches Bundesamt (Destatis), Genesis-Online, Tablename 13211BM001, License \href{https://www.govdata.de/dl-de/by-2-0}{DL-DE BY-2.0}
 "urate"
+
+
+
+#' Average Temperature Germany
+#'
+#' @docType data
+#'
+#' @usage data(temp)
+#'
+#' @format A yearly time series of the class ts.
+#'
+#' @keywords datasets
+#'
+#' @source Deutscher Wetterdienst (DWD), \href{https://www.dwd.de/DE/leistungen/zeitreihen/zeitreihen.htm}{Source}, \href{https://www.dwd.de/DE/service/copyright/copyright_node.html}{Copyright}
+"temp"
+
+
+
+
+#' Reported Covid-19 infections Germany
+#'
+#' @docType data
+#'
+#' @usage data(covidcases)
+#'
+#' @format A daily time series of the class data.frame.
+#'
+#' @keywords datasets
+#'
+#' @source Robert Koch-Institut (RKI), \href{https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Fallzahlen_Kum_Tab_aktuell}{Source}, \href{https://www.govdata.de/dl-de/by-2-0}{DL-DE BY-2.0}
+"covidcases"
+
+
+
+
+#' Covid-19 hospitalization incidence number Germany  the number of new infections in the last 7 days per 100000 inhabitants
+#'
+#' The Covid-19 hospitalization incidence is the number of hospitalized infected persons in the past 7 days per 100000 inhabitants
+#'
+#' @docType data
+#'
+#' @usage data(covidhosp)
+#'
+#' @format A daily time series of the class data.frame.
+#'
+#' @keywords datasets
+#'
+#' @source Robert Koch-Institut (RKI), \href{https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Fallzahlen_Kum_Tab_aktuell}{Source}, \href{https://www.govdata.de/dl-de/by-2-0}{DL-DE BY-2.0}
+"covidhosp"

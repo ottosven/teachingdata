@@ -8,7 +8,7 @@
 A monthly time series of the class ts.
 }
 \source{
-tatistisches Bundesamt (Destatis), Genesis-Online, Tablename 13211BM001, License \href{https://www.govdata.de/dl-de/by-2-0}{DL-DE BY-2.0}
+Statistisches Bundesamt (Destatis), Genesis-Online, Tablename 13211BM001, License \href{https://www.govdata.de/dl-de/by-2-0}{DL-DE BY-2.0}
 }
 \usage{
 data(urate)
