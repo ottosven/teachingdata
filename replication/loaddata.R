@@ -65,7 +65,6 @@ covidcases = data.frame(
   date = as.Date(colnames(df.case)[-1], tryFormats = "%d.%m.%Y"),
   matrix(as.numeric(t(df.case)[-1,1:17]), ncol=17, dimnames = list(NULL, Gnames))
   )
-covidcases = data.frame(date = as.Date(colnames(df.case)[-1], tryFormats = "%d.%m.%Y"), incidence = as.numeric(t(df.case)[-1,17]))
 df.hosp = readxl::read_excel(tmp,sheet=2, skip=4)
 covidhosp = data.frame(
   date = as.Date(colnames(df.hosp)[-1], tryFormats = "%d.%m.%Y"),
