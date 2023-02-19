@@ -3,7 +3,7 @@
 \docType{data}
 \name{covidhosp}
 \alias{covidhosp}
-\title{Covid-19 hospitalization incidence number Germany}
+\title{Covid-19 hospitalization incidence numbers Germany}
 \format{
 A daily maulivariate time series of the class data.frame.
 }

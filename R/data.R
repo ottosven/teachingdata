@@ -113,7 +113,7 @@
 
 
 
-#' Covid-19 hospitalization incidence number Germany
+#' Covid-19 hospitalization incidence numbers Germany
 #'
 #' The Covid-19 hospitalization incidence is the number of hospitalized infected persons in the past 7 days per 100000 inhabitants.
 #' The data are available for the individual federal states and for Germany overall.
