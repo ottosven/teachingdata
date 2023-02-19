@@ -16,6 +16,7 @@ data = data[order(data$JAHR, data$QUARTG),]
 gdp = ts(data$VGR014_val, start = data$JAHR[1], frequency = 4)
 usethis::use_data(gdp, overwrite = TRUE)
 
+
 ## CPI and inflation Germany
 wiesbaden::retrieve_datalist("61111*", genesis=c(db="de"))
 data=wiesbaden::retrieve_data("61111BM001", genesis=c(db="de"))
@@ -24,6 +25,7 @@ cpi = ts(data$PREIS1_val, start = data$JAHR[1], frequency = 12)
 infl=diff(log(cpi)*100, 12)
 usethis::use_data(cpi, overwrite = TRUE)
 usethis::use_data(infl, overwrite = TRUE)
+
 
 ## Unemployment rate Germany
 wiesbaden::retrieve_datalist("13211*", genesis=c(db="de"))
@@ -57,10 +59,18 @@ usethis::use_data(temp, overwrite = TRUE)
 url='https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Fallzahlen_Kum_Tab_aktuell.xlsx?__blob=publicationFile'
 tmp <- tempfile()
 r1 <- httr::GET(url, httr::write_disk(tmp))
+df.case = readxl::read_excel(tmp,sheet=4, skip=4)
+Gnames = c("BW", "BY", "BE", "BB", "HB", "HH", "HE", "MV", "NI", "NW", "RP", "SL", "SN", "ST", "SH", "TH", "GER")
+covidcases = data.frame(
+  date = as.Date(colnames(df.case)[-1], tryFormats = "%d.%m.%Y"),
+  matrix(as.numeric(t(df.case)[-1,1:17]), ncol=17, dimnames = list(NULL, Gnames))
+  )
+covidcases = data.frame(date = as.Date(colnames(df.case)[-1], tryFormats = "%d.%m.%Y"), incidence = as.numeric(t(df.case)[-1,17]))
 df.hosp = readxl::read_excel(tmp,sheet=2, skip=4)
-df.case = readxl::read_excel(tmp,sheet=3, skip=4)
-covidcases = data.frame(date = as.Date(colnames(df.case)[-1], tryFormats = "%d.%m.%Y"), incidencenumber = as.numeric(t(df.case)[-1,17]))
-covidhosp = data.frame(date = as.Date(colnames(df.hosp)[-1], tryFormats = "%d.%m.%Y"), incidencenumber = as.numeric(t(df.hosp)[-1,17]))
+covidhosp = data.frame(
+  date = as.Date(colnames(df.hosp)[-1], tryFormats = "%d.%m.%Y"),
+  matrix(as.numeric(t(df.hosp)[-1,1:17]), ncol=17, dimnames = list(NULL, Gnames))
+)
 usethis::use_data(covidcases, overwrite = TRUE)
 usethis::use_data(covidhosp, overwrite = TRUE)
 
@@ -70,14 +80,17 @@ usethis::use_data(covidhosp, overwrite = TRUE)
 ## Financial and Economic data
 ## ########################################
 
+## retrieve data from Yahoo Finance:
 dax.dat = tidyquant::tq_get('^GDAXI', from = "1990-01-01", to = Sys.Date(), get = "stock.prices")
 dax = na.omit(data.frame(date = as.Date(dax.dat$date), close = dax.dat$close))
-
 eur.dat = tidyquant::tq_get('EURUSD=X', from = "1990-01-01", to = Sys.Date(), get = "stock.prices")
 eur = na.omit(data.frame(date = as.Date(eur.dat$date), close = eur.dat$close))
 
+## Data on German stock index (1990--2019):
+library(smoots)
+dax
+
+## The FRED-QD and FRED-MD database (as of 2021):
 library(BVAR)
 fred_qd
 fred_md
-library(smoots)
-dax

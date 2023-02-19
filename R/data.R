@@ -94,13 +94,16 @@
 
 
 
-#' Reported Covid-19 infections Germany
+#' Reported Covid-19 infection incidence numbers Germany
+#'
+#' The Covid-19 infection incidence number is the number of reported infections in the past 7 days per 100000 inhabitants.
+#' The data are available for the individual federal states and for Germany overall.
 #'
 #' @docType data
 #'
 #' @usage data(covidcases)
 #'
-#' @format A daily time series of the class data.frame.
+#' @format A daily multivariate time series of the class data.frame.
 #'
 #' @keywords datasets
 #'
@@ -110,15 +113,16 @@
 
 
 
-#' Covid-19 hospitalization incidence number Germany  the number of new infections in the last 7 days per 100000 inhabitants
+#' Covid-19 hospitalization incidence number Germany
 #'
-#' The Covid-19 hospitalization incidence is the number of hospitalized infected persons in the past 7 days per 100000 inhabitants
+#' The Covid-19 hospitalization incidence is the number of hospitalized infected persons in the past 7 days per 100000 inhabitants.
+#' The data are available for the individual federal states and for Germany overall.
 #'
 #' @docType data
 #'
 #' @usage data(covidhosp)
 #'
-#' @format A daily time series of the class data.frame.
+#' @format A daily maulivariate time series of the class data.frame.
 #'
 #' @keywords datasets
 #'

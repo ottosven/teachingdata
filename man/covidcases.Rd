@@ -3,9 +3,9 @@
 \docType{data}
 \name{covidcases}
 \alias{covidcases}
-\title{Reported Covid-19 infections Germany}
+\title{Reported Covid-19 infection incidence numbers Germany}
 \format{
-A daily time series of the class data.frame.
+A daily multivariate time series of the class data.frame.
 }
 \source{
 Robert Koch-Institut (RKI), \href{https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Fallzahlen_Kum_Tab_aktuell}{Source}, \href{https://www.govdata.de/dl-de/by-2-0}{DL-DE BY-2.0}
@@ -14,6 +14,7 @@ Robert Koch-Institut (RKI), \href{https://www.rki.de/DE/Content/InfAZ/N/Neuartig
 data(covidcases)
 }
 \description{
-Reported Covid-19 infections Germany
+The Covid-19 infection incidence number is the number of reported infections in the past 7 days per 100000 inhabitants.
+The data are available for the individual federal states and for Germany overall.
 }
 \keyword{datasets}

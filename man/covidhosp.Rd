@@ -3,9 +3,9 @@
 \docType{data}
 \name{covidhosp}
 \alias{covidhosp}
-\title{Covid-19 hospitalization incidence number Germany  the number of new infections in the last 7 days per 100000 inhabitants}
+\title{Covid-19 hospitalization incidence number Germany}
 \format{
-A daily time series of the class data.frame.
+A daily maulivariate time series of the class data.frame.
 }
 \source{
 Robert Koch-Institut (RKI), \href{https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Fallzahlen_Kum_Tab_aktuell}{Source}, \href{https://www.govdata.de/dl-de/by-2-0}{DL-DE BY-2.0}
@@ -14,6 +14,7 @@ Robert Koch-Institut (RKI), \href{https://www.rki.de/DE/Content/InfAZ/N/Neuartig
 data(covidhosp)
 }
 \description{
-The Covid-19 hospitalization incidence is the number of hospitalized infected persons in the past 7 days per 100000 inhabitants
+The Covid-19 hospitalization incidence is the number of hospitalized infected persons in the past 7 days per 100000 inhabitants.
+The data are available for the individual federal states and for Germany overall.
 }
 \keyword{datasets}
