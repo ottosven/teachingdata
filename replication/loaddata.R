@@ -7,7 +7,6 @@
 # password = "my_password"
 # wiesbaden::save_credentials("de", username, password)
 
-
 ## GDP Germany
 wiesbaden::retrieve_datalist("81000*", genesis=c(db="de"))
 data=wiesbaden::retrieve_data("81000BV007", genesis=c(db="de"))
