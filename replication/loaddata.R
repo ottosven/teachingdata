@@ -7,6 +7,10 @@
 # password = "my_password"
 # wiesbaden::save_credentials("de", username, password)
 
+username = "DEY2R1G872"
+password = "Ty6eWRCaSCP8fSt"
+wiesbaden::save_credentials("de", username, password)
+
 ## GDP Germany
 wiesbaden::retrieve_datalist("81000*", genesis=c(db="de"))
 data=wiesbaden::retrieve_data("81000BV007", genesis=c(db="de"))
@@ -14,6 +18,8 @@ data=data[data$VGRPB5=="VGRJPM" & data$WERT05=="WERTORG",]
 data = data[order(data$JAHR, data$QUARTG),]
 gdp = ts(data$VGR014_val, start = data$JAHR[1], frequency = 4)
 usethis::use_data(gdp, overwrite = TRUE)
+gdpgr = diff(log(gdp), 4)
+usethis::use_data(gdpgr, overwrite = TRUE)
 
 
 ## CPI and inflation Germany

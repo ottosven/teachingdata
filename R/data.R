@@ -13,6 +13,22 @@
 "gdp"
 
 
+#' German Quarterly Gross Domestic Product Annual Growth Rate (nominal)
+#'
+#'
+#' @docType data
+#'
+#' @usage data(gdpgr)
+#'
+#' @format A quarterly time series of the class ts.
+#'
+#' @keywords datasets
+#'
+#' @source Statistisches Bundesamt (Destatis), Genesis-Online, Tablename 81000BV007, License \href{https://www.govdata.de/dl-de/by-2-0}{DL-DE BY-2.0}
+"gdpgr"
+
+
+
 #' Consumer Price Index Germany
 #'
 #'
