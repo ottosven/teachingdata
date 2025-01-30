@@ -7,8 +7,6 @@
 # password = "my_password"
 # wiesbaden::save_credentials("de", username, password)
 
-username = "DEY2R1G872"
-password = "Ty6eWRCaSCP8fSt"
 wiesbaden::save_credentials("de", username, password)
 
 ## GDP Germany
